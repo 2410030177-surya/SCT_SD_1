@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background" aria-hidden="true">
+    <span class="orb orb-one"></span>
+    <span class="orb orb-two"></span>
+    <span class="orb orb-three"></span>
+</div>
+
+<div class="container">
+    <div class="topbar">
+        <div class="brand">
+            <span class="brand-icon">🌡️</span>
+            <div>
+                <p class="eyebrow">Temperature Tool</p>
+                <h1>Temperature Converter</h1>
+            </div>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <div class="field">
+        <input type="number" id="temp" placeholder=" ">
+        <label for="temp">Enter temperature</label>
+    </div>
+
+    <div class="unit-grid">
+        <div class="field">
+            <select id="fromUnit">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <!-- <label for="fromUnit">From unit</label> -->
+        </div>
+
+        <button class="swap-button" id="swapUnits" type="button" aria-label="Swap units">🔄</button>
+
+        <div class="field">
+            <select id="toUnit">
+                <option value="F">Fahrenheit</option>
+                <option value="C">Celsius</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <!-- <label for="toUnit">To unit</label> -->
+        </div>
+    </div>
+
+    <button class="convert-button" type="button" onclick="convertTemp()">Convert</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
